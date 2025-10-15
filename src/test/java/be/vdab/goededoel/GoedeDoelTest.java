@@ -35,4 +35,8 @@ class GoedeDoelTest {
     @Test void doelVerschiltVanEenObjectMetEenAnderType() {
         assertThat(doel).isNotEqualTo(BigDecimal.ZERO);
     }
+    @Test
+    void gelijkeDoelGevenHebbenDezelfdeHashCode(){
+        assertThat(doel.hashCode()).isEqualTo(new GoedeDoel(NAAM).hashCode());
+    }
 }
